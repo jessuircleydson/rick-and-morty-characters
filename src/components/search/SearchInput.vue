@@ -3,4 +3,11 @@
 </template>
 
 <script>
+export default {
+    props: {
+        searchValue: {
+            type: Function,
+        }
+    }
+}
 </script>
