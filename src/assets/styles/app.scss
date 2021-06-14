@@ -4,7 +4,10 @@
 @import '~bootstrap/dist/css/bootstrap.css';
 @import '~bootstrap-vue/dist/bootstrap-vue.css';
 
-@import '@/assets/styles/search/searchButton.scss';
-@import '@/assets/styles/search/searchInput.scss';
+@import '@/assets/styles/general/common.scss';
 @import '@/assets/styles/general/loading.scss';
+@import '@/assets/styles/search/search-button.scss';
+@import '@/assets/styles/search/search-input.scss';
+@import '@/assets/styles/characters/characters-list.scss';
+@import '@/assets/styles/characters/characters-item.scss';
 

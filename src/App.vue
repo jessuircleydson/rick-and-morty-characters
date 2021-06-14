@@ -1,9 +1,12 @@
 <template>
-  <div id="app" :class="{'loading': load}">
+  <div id="app" :class="{'loading': $apollo.loading}">
+    <span style="color:red;"> {{$apollo.loading}} </span>
+
     <div id="bg">
+
         <router-view/>
     </div>
-    <div id="load-content" v-if="load">
+    <div id="load-content" v-if="$apollo.loading">
         <Loading />
     </div>
   </div>
@@ -28,6 +31,7 @@
 @import '@/assets/styles/app.scss';
 
 #app {
+    background-color: #060606;
     #bg {
         position: absolute;
         z-index:0;
@@ -35,8 +39,8 @@
         background-repeat: no-repeat;
         background-size:cover;
         background-position: center 70%;
-        width:100vw;
         height:100vh;
+        width:100%;
     }
 }
 

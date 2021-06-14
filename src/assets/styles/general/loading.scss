@@ -1,10 +1,42 @@
+@mixin fade-loading-once($duration) {
+    $name: inline-#{unique-id()};
+
+    @keyframes #{$name} {
+      @content;
+    }
+
+    animation-name: $name;
+    animation-duration: $duration;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards
+}
+
+@mixin fade-loading-infinite($duration) {
+    $name: inline-#{unique-id()};
+
+    @keyframes #{$name} {
+      @content;
+    }
+
+    animation-name: $name;
+    animation-duration: $duration;
+    animation-iteration-count: infinite;
+    animation-fill-mode: alternate-reverse;
+    animation-direction: alternate;
+}
+
+
 .loading {
   background-color:black;
   #bg {
-    filter: blur(20px);
+    @include fade-loading-once(1s) {
+      from { filter: blur(0) }
+      to { filter: blur(20px) }
+    }
+
     background-color:black;
   }
-
+   
   #load-content {
     position: relative;
     z-index:10;
@@ -13,9 +45,22 @@
     align-items:center;
     height:100vh;
 
+    @include fade-loading-once(2s) {
+      from { opacity: 0 }
+      to { opacity: 1 }
+    }
+
     #loading-item {
       text-align:center;
       img {
+        @include fade-loading-infinite(1s) {
+          from {
+          opacity: 0.5;
+        }
+          to {
+          opacity: 1
+        }
+        }
         border-radius: 8px;
         border: 2px solid #606060;
         margin-bottom: 36px;
