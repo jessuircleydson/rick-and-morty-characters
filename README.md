@@ -1,4 +1,4 @@
-# ingaia-challenge
+# Rick and Morty Characters
 
 ## Project setup
 ```
