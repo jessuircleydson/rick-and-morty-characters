@@ -1,32 +1,43 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div id="app" :class="{'loading': load}">
+    <div id="bg">
+        <router-view/>
     </div>
-    <router-view/>
+    <div id="load-content" v-if="load">
+        <Loading />
+    </div>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+    import Loading from '@/components/Loading'
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+    export default {
+        components: {
+            Loading,
+        },
+        computed: {
+            load() {
+                return this.$store.state.loading
+            }
+        }
     }
-  }
+</script>
+
+<style lang="scss">
+@import '@/assets/styles/app.scss';
+
+#app {
+    #bg {
+        position: absolute;
+        z-index:0;
+        background-image: url('./assets/Background.png');
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: center 70%;
+        width:100vw;
+        height:100vh;
+    }
 }
+
 </style>

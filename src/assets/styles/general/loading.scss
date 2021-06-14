@@ -1,0 +1,29 @@
+.loading {
+  background-color:black;
+  #bg {
+    filter: blur(20px);
+    background-color:black;
+  }
+
+  #load-content {
+    position: relative;
+    z-index:10;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+
+    #loading-item {
+      text-align:center;
+      img {
+        border-radius: 8px;
+        border: 2px solid #606060;
+        margin-bottom: 36px;
+      }
+      p {
+        color:white;
+      }
+    }
+  }
+
+}
