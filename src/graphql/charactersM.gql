@@ -1,0 +1,14 @@
+mutation ($name: String!) {
+        characters(filter: { name: $name }) {
+    info {
+      count
+    }
+    results {
+      id,
+      name,
+      image,
+      species
+    }
+  }
+}
+

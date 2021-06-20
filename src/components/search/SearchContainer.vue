@@ -1,5 +1,5 @@
 <template>
-    <div class="d-flex justify-content-center" id="search-container">
+    <div id="search-container">
         <SearchInput />
         <SearchButton />
     </div>

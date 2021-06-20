@@ -1,12 +1,10 @@
 <template>
-  <div id="app" :class="{'loading': $apollo.loading}">
-    <span style="color:red;"> {{$apollo.loading}} </span>
+  <div id="app" :class="{'loading': load}">
 
     <div id="bg">
-
         <router-view/>
     </div>
-    <div id="load-content" v-if="$apollo.loading">
+    <div id="load-content" v-if="load">
         <Loading />
     </div>
   </div>

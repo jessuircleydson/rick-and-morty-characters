@@ -1,11 +1,8 @@
 @charset 'utf-8';
 
-// bootstrap
-@import '~bootstrap/dist/css/bootstrap.css';
-@import '~bootstrap-vue/dist/bootstrap-vue.css';
-
 @import '@/assets/styles/general/common.scss';
 @import '@/assets/styles/general/loading.scss';
+@import '@/assets/styles/search/search-container.scss';
 @import '@/assets/styles/search/search-button.scss';
 @import '@/assets/styles/search/search-input.scss';
 @import '@/assets/styles/characters/characters-list.scss';

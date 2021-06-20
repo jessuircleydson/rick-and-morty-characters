@@ -1,7 +1,6 @@
 <template>
     <div class="characters-list">
-    
-    <span style="color:red;"> {{$apollo.loading}} </span>
+   <button>Rick</button>
         <paginate
             class="list-container"
             name="items"
@@ -37,6 +36,7 @@ export default {
     data() {
         return {
             paginate: ['items'],
+            searchV: 'rick'
         }
     },
     apollo: {
@@ -44,7 +44,7 @@ export default {
             query: GetCharacters,
             variables: {
                 page: 1,
-                name: 'morty',
+                    name: 'rick',
             },
         }
     },
