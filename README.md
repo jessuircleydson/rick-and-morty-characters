@@ -1,29 +1,24 @@
 # Rick and Morty Characters
+![Badge](https://img.shields.io/static/v1?label=CLIENT&message=VUE.JS&color=4FC08D&style=flat-square&logo=vuejs)
+![Badge](https://img.shields.io/static/v1?label=API&message=GRAPHQL&color=E10098&style=flat-square&logo=graphql)
 
-## Project setup
-```
-npm install
-```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+ ### 🚧 CODING... 🚧
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Simple SPA to search the Characters of the Rick and Morty animation.
 
-### Run your unit tests
-```
-npm run test:unit
-```
+### GRAPQL API
+https://rickandmortyapi.com/graphql
 
-### Lints and fixes files
-```
-npm run lint
-```
+### Features
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- [ ] Search Characters by name
+- [ ] Show character details when clicked on the item
+
+## Heroku APP
+Pending...
+
+#### Credits
+Based on the Ingaia frontend layout challenger
+https://github.com/ingaia/frontend-challenge
+
