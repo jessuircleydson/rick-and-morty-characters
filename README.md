@@ -13,6 +13,7 @@ https://rickandmortyapi.com/graphql
 ### Features
 
 - [ ] Search Characters by name
+- [ ] Consume graphQL API
 - [ ] Show character details when clicked on the item
 
 ## Heroku APP
